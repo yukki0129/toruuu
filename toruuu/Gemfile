@@ -41,3 +41,10 @@ gem 'mongoid'
 
 # bson
 gem 'bson_ext'
+
+#devise
+gem 'devise'
+
+gem 'multi_json'
+
+gem 'moped'
