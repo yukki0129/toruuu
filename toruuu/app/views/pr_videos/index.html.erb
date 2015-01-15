@@ -1,0 +1,29 @@
+<h1>Listing pr_videos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Video</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pr_videos.each do |pr_video| %>
+      <tr>
+        <td><%= pr_video.title %></td>
+        <td><%= pr_video.video %></td>
+        <td><%= pr_video.description %></td>
+        <td><%= link_to 'Show', pr_video %></td>
+        <td><%= link_to 'Edit', edit_pr_video_path(pr_video) %></td>
+        <td><%= link_to 'Destroy', pr_video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pr video', new_pr_video_path %>

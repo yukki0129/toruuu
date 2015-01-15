@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :pr_videos
 
+  #devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  devise_for :users, :controllers => {
+  :sessions      => "users/sessions",
+  :registrations => "users/registrations",
+  :passwords     => "users/passwords",
+  :omniauth_callbacks => "users/omniauth_callbacks" 
+}
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+  root 'pr_videos#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

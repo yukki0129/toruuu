@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
+# Use mysql as the database for Active Record
+gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -36,8 +38,18 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# mongoid
-gem 'mongoid'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
-# bson
-gem 'bson_ext'
+# Manage Tag
+gem 'acts-as-taggable-on'
+
+gem 'carrierwave'
+
+gem 'streamio-ffmpeg'
+
+gem 'better_errors'     # 開発中のエラー画面をリッチにする
+gem 'binding_of_caller' # 開発中のエラー画面にさらに変数の値を表示する
+

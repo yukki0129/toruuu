@@ -1,0 +1,2 @@
+module PrVideosHelper
+end
